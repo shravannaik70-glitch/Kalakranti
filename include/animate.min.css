@@ -1,0 +1,154 @@
+@keyframes wp_icon {
+    0%{
+        outline: 2px solid  rgba(0,166,81,1);
+    }
+    25%{
+        outline: 8px solid rgba(0,166,81,0.5);
+    }
+    50%{
+        outline: 10px solid rgba(0,166,81,0.2);
+    }
+    100%{
+        outline: 12px solid rgba(0,166,81,0.0);
+    }
+    /* 100%{
+        outline: 12px solid red;
+    } */
+}
+/* @keyframes wp_icon {
+    0%{
+        right: -20px;
+    }
+    50%{
+        right: 0;
+    }
+    100%{
+        right: -20px;
+    }
+} */
+
+@keyframes con_box_icon1 {
+    10% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(-10px);
+    }
+
+    30% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+
+    70% {
+        transform: translateY(0);
+    }
+
+    80% {
+        transform: translateY(0);
+    }
+
+    90% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes con_box_icon2 {
+    10% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+
+    70% {
+        transform: translateY(0);
+    }
+
+    80% {
+        transform: translateY(0);
+    }
+
+    90% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes con_box_icon3 {
+    10% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+
+    70% {
+        transform: translateY(0);
+    }
+
+    80% {
+        transform: translateY(-10px);
+    }
+
+    90% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
