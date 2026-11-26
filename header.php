@@ -1,4 +1,4 @@
-<section class="top-head">
+<!-- <section class="top-head">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 col-sm-12">
@@ -16,13 +16,13 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <header id="header" class="fixed-top">
     <div class="header_menu">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="logo float-left" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+                    <div class="logo float-left">
                         <a href="index.php" class="scrollto"><img src="images/main-logo.png" alt="Navalai" Title="Navalai" class="img-fluid"></a>
                     </div>
                     <nav class="main-nav float-right d-none d-lg-block">

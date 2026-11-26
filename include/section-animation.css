@@ -1,0 +1,94 @@
+/* =====================================
+   KALAKRITI - SUBTLE SECTION ANIMATIONS
+===================================== */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+/* Scroll reveal: applied only after JS initializes */
+.kk-reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.75s ease, transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--kk-delay, 0ms);
+}
+.kk-reveal.kk-from-left {
+    transform: translateX(-24px);
+}
+.kk-reveal.kk-from-right {
+    transform: translateX(24px);
+}
+.kk-reveal.kk-revealed {
+    opacity: 1;
+    transform: none;
+}
+
+/* Existing Bootstrap 4 hero: animate children, not centered wrapper */
+.carousel-item.active .hm-slider-img h6 {
+    animation: kkHeroText 0.65s ease-out 0.20s both;
+}
+.carousel-item.active .hm-slider-img h2 {
+    animation: kkHeroText 0.80s ease-out 0.35s both;
+}
+.carousel-item.active .hm-slider-img p {
+    animation: kkHeroText 0.75s ease-out 0.50s both;
+}
+.carousel-item.active .hm-slider-img .slider-btn {
+    animation: kkHeroText 0.75s ease-out 0.65s both;
+}
+@keyframes kkHeroText {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Desktop mega menu: no moving hover gap */
+@media (min-width: 992px) {
+    #header .main-nav .drop-down > .megha-menu {
+        top: 100%;
+        transition: opacity 0.25s ease, visibility 0.25s ease;
+        pointer-events: none;
+    }
+    #header .main-nav .drop-down:hover > .megha-menu,
+    #header .main-nav .drop-down:focus-within > .megha-menu {
+        top: 100%;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    #header .main-nav .drop-down:hover > .megha-menu .megha-box,
+    #header .main-nav .drop-down:focus-within > .megha-menu .megha-box {
+        animation: kkHeroText 0.4s ease both;
+    }
+    #header .main-nav .drop-down:hover > .megha-menu .megha-box-img,
+    #header .main-nav .drop-down:focus-within > .megha-menu .megha-box-img {
+        animation: kkHeroText 0.5s ease 0.08s both;
+    }
+    .megha-box-img img {
+        transition: transform 0.65s ease;
+    }
+    .megha-box-img:hover img {
+        transform: scale(1.05);
+    }
+}
+
+/* Preserve Owl track transforms and existing card hover effects. */
+footer .ftr-link a {
+    transition: color 0.3s ease;
+}
+@media (max-width: 767px) {
+    .kk-reveal.kk-from-left,
+    .kk-reveal.kk-from-right {
+        transform: translateY(18px);
+    }
+    .kk-reveal.kk-revealed {
+        transform: none;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .kk-reveal { opacity: 1; transform: none !important; transition: none !important; }
+    .carousel-item.active .hm-slider-img *,
+    .carousel-fade .carousel-item.active img,
+    #header .megha-menu * { animation: none !important; }
+}

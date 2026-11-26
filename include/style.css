@@ -66,6 +66,11 @@ body {
 }
 
 /** **************** **/
+.carousel {
+  position: relative !important;
+  margin-top: 91px !important;
+}
+
 
 body::-webkit-scrollbar {
   width: 8px;
@@ -237,119 +242,108 @@ body::-webkit-scrollbar-track {
 
 /** **************** **/
 
-.top-head {
-  background-color: #FFF5F2;
-
-      position: relative;
-    z-index: 2;
-}
-/* Header: normal and scroll states */
 #header.fixed-top {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9998;
-    padding: 0;
-    background: #fff;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9998;
+  padding: 0;
+  background: #f3ede8;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 #header.header-scrolled {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9998;
-    padding: 0;
-    background: #fff;
-    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.13);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9998;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 5px 22px rgba(0, 0, 0, 0.13);
 }
 
 /* Original logo placement */
 #header .logo {
-    position: absolute;
-    top: -30px;
-    left: -14px;
-    z-index: 100;
-    display: block;
-    padding: 5px 12px;
-    background: #fff;
-    border-radius: 0 37px 0 0;
-    transition: bottom 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  top: 1px;
+  left: -14px;
+  z-index: 100;
+  display: block;
+  padding: 0px 10px;
+  background: #fff;
+  border-radius: 0 40px 0 0;
+  transition: top 0.3s ease, transform 0.3s ease;
 }
 
 #header .logo img,
 #header .logo .scrollto img {
-    display: block;
-    width: 319px;
-    height: auto;
-    max-height: none;
-    padding: 0;
-    object-fit: contain;
-    border-radius: 0;
-    background: transparent;
-    transition: width 0.3s ease;
+  display: block;
+  width: 283px;
+  height: auto;
+  max-height: none;
+  padding: 0;
+  object-fit: contain;
+  border-radius: 0;
+  background: transparent;
+  transition: width 0.3s ease;
 }
 
-/* Keep logo inside header after scrolling */
 #header.header-scrolled .logo {
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    z-index: 100;
-    padding: 0;
-    background: #fff;
-    border-radius: 0;
+  position: absolute;
+  top: 48%;
+  left: -12px;
+  transform: translateY(-50%);
+  z-index: 100;
+  padding: 0;
+  background: #fff;
+  border-radius: 0;
 }
 
 #header.header-scrolled .logo img,
 #header.header-scrolled .logo .scrollto img {
-    display: block;
-    width: 240px;
-    height: auto;
-    max-height: 94px;
-    padding: 0;
-    object-fit: contain;
+  display: block;
+  width: 288px;
+  height: auto;
+  /* max-height: 94px; */
+  padding: 0;
+  object-fit: contain;
 }
 
-#header.header-scrolled .main-nav > ul > li > a {
-    color: #442d30;
+#header.header-scrolled .main-nav>ul>li>a {
+  color: #442d30;
 }
 
 @media (max-width: 767px) {
-    #header .logo {
-        top: 0;
-        left: 10px;
-        padding: 5px;
-    }
+  #header .logo {
+    top: 0;
+    left: 10px;
+    padding: 5px;
+  }
 
-    #header .logo img,
-    #header .logo .scrollto img {
-        width: 120px;
-    }
+  #header .logo img,
+  #header .logo .scrollto img {
+    width: 120px;
+  }
 
-    #header.header-scrolled .logo {
-        top: 50%;
-        left: 10px;
-        padding: 0;
-    }
+  #header.header-scrolled .logo {
+    top: 50%;
+    left: 10px;
+    padding: 0;
+  }
 
-    #header.header-scrolled .logo img,
-    #header.header-scrolled .logo .scrollto img {
-        width: 100px;
-        max-height: 60px;
-    }
+  #header.header-scrolled .logo img,
+  #header.header-scrolled .logo .scrollto img {
+    width: 100px;
+    max-height: 60px;
+  }
 }
 
-#header .main-nav .drop-down:hover > .megha-menu {              
-    top: 100%;
+#header .main-nav .drop-down:hover>.megha-menu {
+  top: 100%;
 }
 
-#carouselExampleFade.carousel {
-    margin-top: 137px;
-}
 
 
 /* ==================== */
@@ -439,7 +433,7 @@ body::-webkit-scrollbar-track {
 }
 
 .main-nav a {
-  color: #442D30;
+  color: #393536;
   font-weight: 400;
   letter-spacing: 0.25px;
 }
@@ -485,20 +479,9 @@ body::-webkit-scrollbar-track {
   background-color: #FFF5F2;
 }
 
-
-
-
-
-
-
-
-
 .header-scrolled .main-nav>ul>li>a {
   color: #442d30;
 }
-
-
-
 
 .main-nav {
   float: right;
@@ -519,9 +502,11 @@ body::-webkit-scrollbar-track {
 .main-nav a {
   display: inline-block;
   font-size: 17px;
-  padding: 30px 25px;
-  font-weight: 400;
+  padding: 35px 16px;
+  font-weight: 900;
   text-transform: uppercase;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  letter-spacing: 0.45px;
 }
 
 .header-scrolled .main-nav a {
@@ -995,7 +980,10 @@ body::-webkit-scrollbar-track {
   font-size: 20px;
   line-height: 1.2;
   color: #fff;
+  letter-spacing: 0.25px;
+  font-weight: 600;
   text-wrap: wrap;
+  font-family: "Cormorant Garamond", Georgia, serif;
 }
 
 /** **************** **/
@@ -1056,35 +1044,22 @@ body::-webkit-scrollbar-track {
   }
 }
 
-/*Only Fade Slide End*/
-.carousel {
-  overflow: hidden;
-  position: relative;
-  margin-top: 129px;
-}
-
-/*.carousel:after{
-  content: "";
-  position: absolute;
-  width: 420px;
-  height: 420px;
-  background: #9acb272b;
-  filter: blur(75px);
-  bottom: -230px;
-  right: -50px;
-  pointer-events: none;
-}*/
-.carousel-item:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  inset: 0;
-  /*background: linear-gradient(90deg, rgba(8, 31, 48, .94), rgba(0, 104, 153, .70), rgba(16, 44, 66, .35));*/
-  background: linear-gradient(90deg, rgb(0 0 0 / 67%), rgb(0 0 0 / 0%), rgb(0 0 0 / 22%));
-  z-index: 1;
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(40, 24, 18, 0.85) 0%,
+        rgba(40, 24, 18, 0.65) 20%,
+        rgba(40, 24, 18, 0.40) 35%,
+        rgba(40, 24, 18, 0.15) 50%,
+        rgba(40, 24, 18, 0.00) 70%
+    );
+    z-index: 1;
+    pointer-events: none;
 }
 
 .carousel:after {
@@ -1250,7 +1225,7 @@ body::-webkit-scrollbar-track {
 .hm-slider-img {
   position: absolute;
   width: 697px;
-  left: 12%;
+  left: 6%;
   top: 50%;
   z-index: 15;
   color: #fff;
@@ -1270,7 +1245,7 @@ body::-webkit-scrollbar-track {
   position: absolute;
   width: 30px;
   height: 2px;
-  background-color: #b6e344;
+  background-color: #d87b7b;
   top: 50%;
   left: 0;
   transform: translate(0%, -50%);
@@ -1278,9 +1253,10 @@ body::-webkit-scrollbar-track {
 
 .hm-slider-img h2 {
   color: #fff;
-  font-size: 3vw;
-  font-weight: 400;
+  font-size: 4vw;
+  font-weight: 700;
   margin-top: 15px;
+  font-family: "Cormorant Garamond", Georgia, serif;
   margin-bottom: 15px;
 }
 
@@ -1312,301 +1288,2963 @@ body::-webkit-scrollbar-track {
 
 /** **************** **/
 
+.jew .ry-collection-section {
+  padding: 75px 40px 60px;
+  background-color: #faf7f4;
+}
 
-.jewelry-collection-section {
-    padding: 75px 40px 50px;
-    background-color: #fff;
+.jewelry-collection-section .container-fluid {
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .collection-heading-row {
-    margin-bottom: 65px;
+  margin-bottom: 55px;
 }
 
+
+/* ====================================
+   COLLECTION SUBTITLE
+==================================== */
+
 .collection-subtitle {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid #e5e8e5;
-    border-radius: 30px;
-    padding: 7px 14px;
-    font-size: 12px;
-    font-weight: 400;
-    color: #34443d;
-    margin-bottom: 15px;
-    line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e1d0ca;
+  border-radius: 30px;
+  background-color: #f3ede8;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: #a66b65;
+  margin-bottom: 15px;
+  line-height: 1;
 }
 
 .collection-dot {
-    width: 5px;
-    height: 5px;
-    background: #34443d;
-    border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #a66b65;
+  border-radius: 50%;
 }
+
+
+/* ====================================
+   COLLECTION HEADING
+==================================== */
 
 .jewelry-collection-section h2 {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 38px;
-    font-weight: 400;
-    line-height: 1.2;
-    color: #34443d;
-    margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(32px, 3vw, 52px);
+  font-weight: 500;
+  line-height: 1.2;
+  color: #393536;
+  letter-spacing: 0.3px;
+  margin: 0;
 }
 
+
+/* ====================================
+   VIEW ALL COLLECTION BUTTON
+==================================== */
+
 .collection-view-btn {
-    display: inline-block;
-    padding: 14px 27px;
-    border: 1px solid #34443d;
-    border-radius: 3px;
-    color: #34443d;
-    font-size: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  padding: 14px 27px;
+  background-color: #a66b65;
+  border: 1px solid #a66b65;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.4s ease;
 }
 
 .collection-view-btn:hover {
-    background-color: #34443d;
-    color: #fff;
+  background-color: #393536;
+  border-color: #393536;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(166, 107, 101, 0.18);
 }
 
+
+/* ====================================
+   COLLECTION ITEMS
+==================================== */
+
 .collection-items-row {
-    row-gap: 30px;
+  row-gap: 30px;
 }
 
 .collection-item {
-    display: block;
-    text-align: center;
-    text-decoration: none;
+  display: block;
+  text-align: center;
+  text-decoration: none;
 }
 
+
+/* ====================================
+   COLLECTION CIRCLE IMAGE
+==================================== */
+
 .collection-image {
-    width: 100%;
-    max-width: 170px;
-    aspect-ratio: 1 / 1;
-    margin: 0 auto 24px;
-    border-radius: 50%;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f3ede8;
+  border: 2px solid #e1d0ca;
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    transform 0.4s ease;
 }
 
 .collection-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    transition: transform 0.4s ease;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* ====================================
+   IMAGE HOVER ANIMATION
+==================================== */
+
+.collection-item:hover .collection-image {
+  border-color: #a66b65;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(166, 107, 101, 0.18);
 }
 
 .collection-item:hover .collection-image img {
-    transform: scale(1.08);
+  transform: scale(1.09);
 }
 
+
 .collection-item h3 {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 19px;
-    font-weight: 400;
-    color: #34443d;
-    margin-bottom: 0;
-    transition: color 0.3s ease;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #393536;
+  margin-bottom: 0;
+  letter-spacing: 0.3px;
+  transition: color 0.3s ease;
+}
+
+
+/* Category Arrow */
+
+.collection-item h3::after {
+  content: "\2192";
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 19px;
+  color: #a66b65;
+  transition: transform 0.4s ease;
 }
 
 .collection-item:hover h3 {
-    color: #a67c52;
+  color: #a66b65;
 }
 
-/* Tablet */
+.collection-item:hover h3::after {
+  transform: translateX(6px);
+}
+
+
+
+
+@media (min-width: 1600px) {
+
+  .collection-image {
+    max-width: 220px;
+  }
+
+  .jewelry-collection-section {
+    padding: 85px 40px 70px;
+  }
+
+}
+
+
+/* ====================================
+   LAPTOP RESPONSIVE
+==================================== */
+
+@media (max-width: 1399px) {
+
+  .jewelry-collection-section {
+    padding: 70px 0px 80px;
+  }
+
+  .collection-heading-row {
+    margin-bottom: 45px;
+  }
+
+  .collection-image {
+    max-width: 175px;
+  }
+
+  .collection-item h3 {
+    font-size: 22px;
+  }
+
+}
+
+
+/* ====================================
+   TABLET RESPONSIVE
+==================================== */
+
 @media (max-width: 991px) {
-    .jewelry-collection-section {
-        padding: 60px 20px;
-    }
 
-    .jewelry-collection-section h2 {
-        font-size: 32px;
-    }
+  .jewelry-collection-section {
+    padding: 60px 20px;
+  }
 
-    .collection-heading-row {
-        margin-bottom: 45px;
-    }
+  .jewelry-collection-section h2 {
+    font-size: 36px;
+  }
 
-    .collection-image {
-        max-width: 165px;
-    }
+  .collection-heading-row {
+    margin-bottom: 40px;
+  }
+
+  .collection-image {
+    max-width: 180px;
+  }
+
+  .collection-item h3 {
+    font-size: 21px;
+  }
+
 }
 
-/* Mobile */
+
+/* ====================================
+   MOBILE RESPONSIVE
+==================================== */
+
 @media (max-width: 767px) {
-    .jewelry-collection-section {
-        padding: 45px 10px;
-    }
 
-    .jewelry-collection-section h2 {
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
+  .jewelry-collection-section {
+    padding: 45px 10px;
+  }
 
-    .collection-heading-row {
-        margin-bottom: 35px;
-    }
+  .jewelry-collection-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
 
-    .collection-view-btn {
-        padding: 12px 20px;
-    }
+  .collection-heading-row {
+    margin-bottom: 35px;
+  }
 
-    .collection-image {
-        max-width: 150px;
-        margin-bottom: 15px;
-    }
+  .collection-view-btn {
+    padding: 12px 20px;
+    font-size: 11px;
+  }
 
-    .collection-item h3 {
-        font-size: 17px;
-    }
+  .collection-image {
+    max-width: 150px;
+    margin-bottom: 15px;
+  }
 
-    .collection-items-row {
-        row-gap: 30px;
-    }
+  .collection-item h3 {
+    font-size: 20px;
+  }
+
+  .collection-items-row {
+    row-gap: 30px;
+  }
+
 }
 
 @media (max-width: 375px) {
-    .collection-image {
-        max-width: 130px;
-    }
+
+  .collection-image {
+    max-width: 130px;
+  }
+
+  .collection-item h3 {
+    font-size: 18px;
+  }
+
+}
+
+
+/* ====================================
+   REDUCED MOTION
+==================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .collection-item *,
+  .collection-item h3::after,
+  .collection-view-btn {
+    transition: none;
+  }
+
+  .collection-item:hover .collection-image,
+  .collection-item:hover .collection-image img,
+  .collection-item:hover h3::after,
+  .collection-view-btn:hover {
+    transform: none;
+  }
+
 }
 
 /** **************** **/
+/* =====================================
+   JEWELLERY ABOUT SECTION
+===================================== */
 
-
-/** **************** **/
-
-
-/** **************** **/
-
-footer {
-  background: #0f172b;
-  padding: 80px 0 60px 0;
+.jewellery-about-section {
   position: relative;
+  padding: 100px 40px;
+  background-color: #faf7f4;
   overflow: hidden;
 }
 
-footer:after {
-  position: absolute;
-  content: "";
-  background-image: url(https://wegrowinfraventures.com/_next/static/media/building-footer.6c76adc2.png);
-  background-repeat: no-repeat;
-  width: 100%;
-  left: 0;
-  right: 0;
-  top: auto;
-  min-height: 250px;
-  background-size: cover;
-  bottom: 0;
-  filter: invert(1);
-  opacity: 25%;
+.jewellery-about-section .container-fluid {
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
-footer .row {
+
+/* =====================================
+   ABOUT CONTENT
+===================================== */
+
+.jewellery-about-content {
   position: relative;
-  z-index: 1;
+  padding-right: 45px;
 }
 
-.ftr-link {
-  position: relative;
-  height: 100%;
-}
-
-.ftr-link:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -50px;
-  background: rgb(255 255 255 / 9%);
-  width: 1px;
-  height: 100%;
-}
-
-.ftr-link-aftr:after {
-  display: none;
-}
-
-.ftr-link h4,
-.ftr-head h4 {
+.jewellery-about-subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  color: #a66b65;
+  font-size: 14px;
   font-weight: 500;
-  color: #fff;
-  font-size: 1.3rem;
+  letter-spacing: 4px;
+  margin-bottom: 18px;
+}
+
+.jewellery-about-subtitle::after {
+  content: "";
+  display: inline-block;
+  width: 45px;
+  height: 1px;
+  background-color: #a66b65;
+}
+
+.jewellery-about-content h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(42px, 4vw, 68px);
+  font-weight: 500;
+  line-height: 1.15;
+  color: #393536;
+  margin-bottom: 25px;
+}
+
+.jewellery-about-content p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: 0.25px;
+  color: #625957;
+  margin-bottom: 35px;
+  /* max-width: 650px; */
+}
+
+
+/* =====================================
+   ABOUT FEATURE BOXES
+===================================== */
+
+.jewellery-about-features {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.jewellery-about-features .row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.jewellery-about-features .row>div {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.jewellery-feature-box {
+  position: relative;
+  height: 100%;
+  min-height: 125px;
+  padding: 20px 10px;
+  background-color: #f3ede8;
+  border: 1px solid #e1d0ca;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.jewellery-feature-box::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #a66b65;
+  transition: width 0.5s ease;
+}
+
+.jewellery-feature-box:hover::before {
+  width: 100%;
+}
+
+.jewellery-feature-box:hover {
+  background-color: #fff;
+  transform: translateY(-7px);
+  box-shadow: 0 10px 25px rgba(166, 107, 101, 0.12);
+}
+
+.jewellery-feature-box i {
+  display: inline-block;
+  font-size: 28px;
+  color: #a66b65;
+  margin-bottom: 14px;
+  transition: transform 0.4s ease;
+}
+
+.jewellery-feature-box:hover i {
+  transform: scale(1.15);
+}
+
+.jewellery-feature-box h4 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #393536;
+  margin-bottom: 5px;
+}
+
+.jewellery-feature-box span {
+  display: block;
+  font-size: 14px;
+  color: #625957;
+}
+
+
+/* =====================================
+   ABOUT BUTTON
+===================================== */
+
+.jewellery-about-btn a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 17px 30px;
+  background-color: #a66b65;
+  border: 1px solid #a66b65;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.jewellery-about-btn a i {
+  font-size: 16px;
+  transition: transform 0.4s ease;
+}
+
+.jewellery-about-btn a:hover {
+  background-color: #393536;
+  border-color: #393536;
+  color: #ffffff;
+}
+
+.jewellery-about-btn a:hover i {
+  transform: translateX(5px);
+}
+
+
+/* =====================================
+   ABOUT IMAGE WRAPPER
+===================================== */
+
+.jewellery-about-images {
+  position: relative;
+  padding-left: 105px;
+  padding-bottom: 20px;
+}
+
+
+/* =====================================
+   MAIN ARCH IMAGE
+===================================== */
+
+.jewellery-about-main-img {
+  position: relative;
+  width: 100%;
+  height: clamp(480px, 43vw, 680px);
+  border-radius: 350px 350px 0 0;
+  border: 3px solid #a66b65;
+  padding: 7px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.jewellery-about-main-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 350px 350px 0 0;
+  transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.jewellery-about-main-img:hover img {
+  transform: scale(1.06);
+}
+
+
+/* =====================================
+   SMALL CIRCULAR IMAGE
+===================================== */
+
+.jewellery-about-small-img {
+  position: absolute;
+  left: 0;
+  bottom: 75px;
+  width: clamp(180px, 16vw, 260px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  background-color: #f3ede8;
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(57, 53, 54, 0.12);
+
+  animation: jewelleryImageFloat 5s ease-in-out infinite;
+}
+
+.jewellery-about-small-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.7s ease;
+}
+
+.jewellery-about-small-img:hover img {
+  transform: scale(1.1);
+}
+
+@keyframes jewelleryImageFloat {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =====================================
+   DECORATIVE QUOTE
+===================================== */
+
+.jewellery-about-quote {
+  position: absolute;
+  top: -2%;
+  left: 0;
+  color: #a66b65;
+  font-family: "Allura", cursive;
+  font-size: 33px;
+  font-weight: 400;
+  line-height: 1.15;
+  transform: rotate(-12deg);
+  z-index: 3;
+  pointer-events: none;
+}
+
+
+/* =====================================
+   LAPTOP RESPONSIVE
+===================================== */
+
+@media (max-width: 1399px) {
+
+  .jewellery-about-section {
+    padding: 80px 30px;
+  }
+
+  .jewellery-about-content {
+    padding-right: 25px;
+  }
+
+  .jewellery-about-content p {
+    font-size: 16px;
+  }
+
+  .jewellery-about-images {
+    padding-left: 85px;
+  }
+
+  .jewellery-about-main-img {
+    height: 570px;
+  }
+
+  .jewellery-about-small-img {
+    width: 200px;
+  }
+
+  .jewellery-feature-box h4 {
+    font-size: 22px;
+  }
+
+}
+
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 991px) {
+
+  .jewellery-about-section {
+    padding: 65px 20px;
+  }
+
+  .jewellery-about-content {
+    padding-right: 0;
+    margin-bottom: 55px;
+  }
+
+  .jewellery-about-content h2 {
+    font-size: 48px;
+  }
+
+  .jewellery-about-images {
+    max-width: 650px;
+    padding-left: 100px;
+    margin: 0 auto;
+  }
+
+  .jewellery-about-main-img {
+    height: 600px;
+  }
+
+  .jewellery-about-small-img {
+    width: 220px;
+  }
+
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 767px) {
+
+  .jewellery-about-section {
+    padding: 50px 10px;
+  }
+
+  .jewellery-about-subtitle {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+  }
+
+  .jewellery-about-content h2 {
+    font-size: 40px;
+    margin-bottom: 18px;
+  }
+
+  .jewellery-about-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .jewellery-about-features {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .jewellery-feature-box {
+    min-height: 125px;
+    padding: 18px 5px;
+  }
+
+  .jewellery-feature-box i {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .jewellery-feature-box h4 {
+    font-size: 17px;
+  }
+
+  .jewellery-feature-box span {
+    font-size: 12px;
+  }
+
+  .jewellery-about-btn a {
+    padding: 13px 23px;
+    font-size: 12px;
+  }
+
+  .jewellery-about-images {
+    padding-left: 55px;
+  }
+
+  .jewellery-about-main-img {
+    height: 420px;
+    border-width: 2px;
+    padding: 5px;
+  }
+
+  .jewellery-about-small-img {
+    width: 140px;
+    bottom: 55px;
+    border-width: 4px;
+  }
+
+  .jewellery-about-quote {
+    font-size: 23px;
+  }
+
+}
+
+@media (max-width: 375px) {
+
+  .jewellery-about-main-img {
+    height: 350px;
+  }
+
+  .jewellery-about-small-img {
+    width: 120px;
+  }
+
+  .jewellery-feature-box h4 {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .jewellery-about-section *,
+  .jewellery-about-section *::before,
+  .jewellery-about-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+}
+
+/** **************** **/
+/* =====================================
+   BEST SELLER SECTION
+===================================== */
+
+.best-seller-section {
+  position: relative;
+  padding: 55px 60px;
+  margin: 40px 30px;
+  /* background-color: #f3ede8; */
+  border-radius: 5px;
+}
+
+.best-seller-section .container-fluid {
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+
+/* =====================================
+   LEFT SIDE CONTENT
+===================================== */
+
+.best-seller-content {
+  padding-right: 25px;
+}
+
+.best-seller-subtitle {
+  display: inline-block;
+  color: #a66b65;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.best-seller-content h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(38px, 3.5vw, 58px);
+  font-weight: 500;
+  line-height: 1.15;
+  color: #393536;
+  margin-bottom: 25px;
+}
+
+.best-seller-content p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #625957;
+  margin-bottom: 35px;
+}
+
+
+/* =====================================
+   SHOP ALL BUTTON
+===================================== */
+
+.best-seller-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 14px 28px;
+  background-color: #a66b65;
+  border: 1px solid #a66b65;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.best-seller-btn i {
+  font-size: 14px;
+  transition: transform 0.4s ease;
+}
+
+.best-seller-btn:hover {
+  background-color: #393536;
+  border-color: #393536;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.best-seller-btn:hover i {
+  transform: translateX(5px);
+}
+
+
+/* =====================================
+   PRODUCT CARD
+===================================== */
+
+.best-seller-product {
+  position: relative;
+  width: 100%;
+}
+
+.best-seller-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 10;
+  background-color: #e1d0ca;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.best-seller-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =====================================
+   PRODUCT IMAGE HOVER
+===================================== */
+
+.best-seller-product:hover .best-seller-image img {
+  transform: scale(1.08);
+}
+
+.best-seller-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(166, 107, 101, 0.07);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.best-seller-product:hover .best-seller-image::after {
+  opacity: 1;
+}
+
+
+/* =====================================
+   PRODUCT DETAILS
+===================================== */
+
+.best-seller-details {
+  padding: 17px 0 5px;
+}
+
+.best-seller-details h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
   margin-bottom: 10px;
 }
 
-.ftr-link ul li a {
-  font-size: 18px;
+.best-seller-details h3 a {
+  color: #393536;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.best-seller-details h3 a:hover {
+  color: #a66b65;
+}
+
+
+/* =====================================
+   PRODUCT PRICE
+===================================== */
+
+.best-seller-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.best-seller-price span {
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
   letter-spacing: 0.5px;
-  color: rgb(255 255 255 / 80%);
-  font-weight: 300;
-  display: block;
-  padding: 5px 0;
-}
-
-.ftr-link ul li a:hover {
-  color: #fff;
-}
-
-.ftr-btm {
-  padding: 20px 0;
-  background: #0c1222;
-  position: relative;
-  z-index: 1;
-  border-top: 1px solid rgb(255 255 255 / 9%);
-}
-
-.ftr-design p,
-.ftr-copyright p {
-  color: #a1a1a1;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-.ftr-design {
-  text-align: right;
-}
-
-.ftr-design p a {
-  color: #ffffffd4;
-}
-
-.ftr-design p img {
-  height: 28px;
-}
-
-.ftr-cont p {
-  color: rgb(255 255 255 / 80%);
-  padding-bottom: 15px;
-  font-size: 18px;
+  color: #393536;
 }
 
 
-.ftr-call {
-  margin-bottom: 0.5rem !important;
-  position: relative;
-  padding-left: 40px;
+/* =====================================
+   WISHLIST HEART
+===================================== */
+
+.best-seller-wishlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #a66b65;
+  font-size: 19px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.ftr-call img {
-  width: 25px;
-  height: auto;
-  vertical-align: middle;
+.best-seller-wishlist:hover {
+  transform: scale(1.15);
+}
+
+.best-seller-wishlist.active {
+  color: #a66b65;
+}
+
+.best-seller-wishlist.active i {
+  animation: bestSellerHeart 0.45s ease;
+}
+
+@keyframes bestSellerHeart {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/* =====================================
+   CUSTOM SLIDER ARROWS
+===================================== */
+
+.best-seller-prev,
+.best-seller-next {
   position: absolute;
-  left: 0;
-  top: 5px;
-}
-
-.ftr-call a {
-  color: rgb(255 255 255 / 80%);
-  transition: all 0.3s ease;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #393536;
+  border: 1px solid #e1d0ca;
+  border-radius: 50%;
   font-size: 18px;
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 4px 15px rgba(57, 53, 54, 0.08);
+  transition: all 0.3s ease;
 }
 
-.ftr-call a:hover {
-  color: #fff;
+.best-seller-prev {
+  left: -45px;
 }
 
-.ftr-cont .ftr-logo {
-  height: 75px;
-  margin-bottom: 15px;
+.best-seller-next {
+  right: -45px;
+}
+
+.best-seller-prev:hover,
+.best-seller-next:hover {
+  background-color: #a66b65;
+  border-color: #a66b65;
+  color: #ffffff;
+}
+
+
+/* =====================================
+   OWL CAROUSEL
+===================================== */
+
+.best-seller-slider .owl-stage {
+  display: flex;
+}
+
+.best-seller-slider .owl-item {
+  display: flex;
+}
+
+.best-seller-slider .item {
+  width: 100%;
+}
+
+.best-seller-slider .owl-nav,
+.best-seller-slider .owl-dots {
+  display: none;
+}
+
+
+/* =====================================
+   KEYBOARD FOCUS
+===================================== */
+
+.best-seller-section a:focus-visible,
+.best-seller-section button:focus-visible {
+  outline: 2px solid #a66b65;
+  outline-offset: 4px;
+}
+
+
+/* =====================================
+   LAPTOP RESPONSIVE
+===================================== */
+
+@media (max-width: 1399px) {
+
+  .best-seller-section {
+    padding: 80px 50px 65px 50px;
+    margin: 48px 0px;
+  }
+
+  .best-seller-content {
+    padding-right: 15px;
+  }
+
+  .best-seller-content h2 {
+    font-size: 44px;
+  }
+
+  .best-seller-subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .best-seller-content p {
+    font-size: 15px;
+  }
+
+  .best-seller-details h3 {
+    font-size: 14px;
+  }
+
+  .best-seller-prev {
+    left: -38px;
+  }
+
+  .best-seller-next {
+    right: -38px;
+  }
+
+}
+
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 991.98px) {
+
+  .best-seller-section {
+    padding: 40px 35px;
+    margin: 30px 20px;
+  }
+
+  .best-seller-content {
+    padding-right: 0;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+
+  .best-seller-content h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+  }
+
+  .best-seller-content p {
+    max-width: 400px;
+    margin: 0 auto 25px;
+  }
+
+  .best-seller-subtitle {
+    margin-bottom: 12px;
+  }
+
+  .best-seller-prev,
+  .best-seller-next {
+    top: auto;
+    bottom: 110px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .best-seller-prev {
+    left: -25px;
+  }
+
+  .best-seller-next {
+    right: -25px;
+  }
+
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 767px) {
+
+  .best-seller-section {
+    padding: 35px 20px;
+    margin: 25px 10px;
+  }
+
+  .best-seller-content {
+    margin-bottom: 30px;
+  }
+
+  .best-seller-content h2 {
+    font-size: 38px;
+  }
+
+  .best-seller-content p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .best-seller-subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .best-seller-btn {
+    padding: 12px 22px;
+    font-size: 11px;
+  }
+
+  .best-seller-details {
+    padding-top: 12px;
+  }
+
+  .best-seller-details h3 {
+    font-size: 13px;
+  }
+
+  .best-seller-price span {
+    font-size: 13px;
+  }
+
+  .best-seller-wishlist {
+    font-size: 17px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .best-seller-prev,
+  .best-seller-next {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    bottom: 90px;
+  }
+
+  .best-seller-prev {
+    left: -15px;
+  }
+
+  .best-seller-next {
+    right: -15px;
+  }
+
+}
+
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .best-seller-section *,
+  .best-seller-section *::before,
+  .best-seller-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+}
+
+/* ===================== */
+/* =====================================
+   JEWELLERY PROMISE SECTION
+===================================== */
+
+.jewellery-promise-section {
+  position: relative;
+  padding: 75px 0px 80px;
+  background-color: #ffffff;
+}
+
+.jewellery-promise-section .container-fluid {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+
+/* =====================================
+   SECTION HEADING
+===================================== */
+
+.promise-heading {
+  margin-bottom: 60px;
+}
+
+.promise-subtitle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border: 1px solid #e1d0ca;
+  border-radius: 30px;
+  background-color: #f3ede8;
+  color: #a66b65;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.promise-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #a66b65;
+  border-radius: 50%;
+}
+
+.promise-heading h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(34px, 3.5vw, 55px);
+  font-weight: 500;
+  line-height: 1.2;
+  color: #393536;
+  margin: 0;
+}
+
+
+/* =====================================
+   PROMISE ITEMS
+===================================== */
+
+.promise-items-row>div {
+  position: relative;
+}
+
+.promise-item {
+  position: relative;
+  height: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+
+
+/* Vertical Divider */
+
+.promise-items-row>div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #e1d0ca;
+}
+
+
+/* =====================================
+   ICON BOX
+===================================== */
+
+.promise-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 152px;
+  height: 150px;
+  margin: 0 auto 22px;
+  background-color: #f3ede8;
+  border: 1px solid transparent;
+  border-radius: 89px;
+  overflow: hidden;
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease,
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.promise-icon i {
+  display: inline-block;
+  font-size: 52px;
+  color: #a66b65;
+
+  transition:
+    transform 0.5s ease,
+    color 0.4s ease;
+}
+
+
+/* =====================================
+   FEATURE TITLE
+===================================== */
+
+.promise-item h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #393536;
+  margin: 0;
+  transition: color 0.4s ease;
+}
+
+
+
+
+.promise-item:hover .promise-icon {
+  background-color: #ffffff;
+  border-color: #e1d0ca;
+  transform: translateY(-7px);
+  box-shadow: 0 10px 25px rgba(166, 107, 101, 0.12);
+}
+
+.promise-item:hover .promise-icon i {
+  transform: scale(1.12);
+}
+
+.promise-item:hover h3 {
+  color: #a66b65;
+}
+
+
+
+
+.promise-icon::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 52%;
+  width: 0;
+  height: 12px;
+  background-color: #a66b65;
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
+}
+
+.promise-item:hover .promise-icon::after {
+  width: 100%;
+}
+
+
+@media (max-width: 1399px) {
+
+  .jewellery-promise-section {
+    padding: 65px 0px;
+  }
+
+  .promise-heading {
+    margin-bottom: 45px;
+  }
+
+  .promise-icon {
+    max-width: 140px;
+    height: 140px;
+  }
+
+  .promise-icon i {
+    font-size: 46px;
+  }
+
+  .promise-item h3 {
+    font-size: 23px;
+  }
+
+}
+
+@media (max-width: 991.98px) {
+
+  .jewellery-promise-section {
+    padding: 55px 20px;
+  }
+
+  .promise-heading h2 {
+    font-size: 42px;
+  }
+
+  .promise-items-row {
+    row-gap: 35px;
+  }
+
+  .promise-items-row>div:nth-child(2)::after {
+    display: none;
+  }
+
+  .promise-icon {
+    max-width: 180px;
+    height: 140px;
+  }
+
+}
+
+
+@media (max-width: 767px) {
+
+  .jewellery-promise-section {
+    padding: 45px 10px;
+  }
+
+  .promise-heading {
+    margin-bottom: 35px;
+  }
+
+  .promise-heading h2 {
+    font-size: 34px;
+  }
+
+  .promise-subtitle {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+
+  .promise-item {
+    padding: 0 5px;
+  }
+
+  .promise-icon {
+    max-width: 145px;
+    height: 115px;
+    margin-bottom: 15px;
+  }
+
+  .promise-icon i {
+    font-size: 38px;
+  }
+
+  .promise-item h3 {
+    font-size: 20px;
+  }
+
+  .promise-items-row {
+    row-gap: 30px;
+  }
+
+}
+
+@media (max-width: 375px) {
+
+  .promise-heading h2 {
+    font-size: 30px;
+  }
+
+  .promise-icon {
+    height: 100px;
+  }
+
+  .promise-icon i {
+    font-size: 34px;
+  }
+
+  .promise-item h3 {
+    font-size: 18px;
+  }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  .promise-item *,
+  .promise-icon::after {
+    transition: none !important;
+  }
+
+  .promise-item:hover .promise-icon,
+  .promise-item:hover .promise-icon i {
+    transform: none;
+  }
+
+}
+/* =====================================
+   JEWELLERY PROMOTIONAL SECTION
+===================================== */
+
+.jewellery-promo-section {
+    position: relative;
+    padding: 0px 0 0px 0;
+    background-color: #faf7f4;
+    overflow: hidden;
+}
+
+.jewellery-promo-section .container-fluid {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.jewellery-promo-row {
+    row-gap: 25px;
+}
+
+
+/* =====================================
+   PROMOTIONAL BANNER BOX
+===================================== */
+
+.jewellery-promo-box {
+    position: relative;
+    width: 100%;
+    height: clamp(310px, 19vw, 400px);
+    background-color: #f3ede8;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+
+/* =====================================
+   BACKGROUND IMAGE
+===================================== */
+
+.promo-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -2;
+
+    transition: transform 1.2s
+        cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.jewellery-promo-box:hover .promo-bg-image {
+    transform: scale(1.07);
+}
+
+
+/* =====================================
+   BANNER CONTENT
+===================================== */
+
+.jewellery-promo-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 45px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* =====================================
+   SUBTITLE
+===================================== */
+
+.promo-subtitle {
+    display: inline-block;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 1.6;
+    color: #a66b65;
+    margin-bottom: 12px;
+}
+
+
+/* =====================================
+   MAIN HEADING
+===================================== */
+
+.jewellery-promo-content h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(30px, 2.2vw, 46px);
+    font-weight: 500;
+    line-height: 1.15;
+    color: #393536;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================
+   DESCRIPTION
+===================================== */
+
+.jewellery-promo-content p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #4d4849;
+    max-width: 350px;
+    margin-bottom: 25px;
+    letter-spacing: 0.25px;
+}
+
+
+/* =====================================
+   FIRST BANNER CONTENT POSITION
+===================================== */
+
+.promo-style-one .jewellery-promo-content {
+    padding-right: 32%;
+    padding-left: 20px;
+}
+
+.promo-style-one .promo-subtitle,
+.promo-style-one h2,
+.promo-style-one p {
+    color: #ffffff;
+}
+
+.promo-style-one::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        transparent 15%,
+        rgba(45, 25, 15, 0.15) 50%,
+        rgba(45, 25, 15, 0.35) 100%
+    );
+    z-index: -1;
+}
+
+
+/* =====================================
+   SECOND AND THIRD BANNER POSITION
+===================================== */
+
+.promo-style-two .jewellery-promo-content,
+.promo-style-three .jewellery-promo-content {
+    padding-right: 31%;
+}
+
+.promo-style-two::before,
+.promo-style-three::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(250, 247, 244, 0.25) 0%,
+        transparent 75%
+    );
+    z-index: -1;
+}
+
+
+/* =====================================
+   SHOP NOW BUTTON
+===================================== */
+
+.jewellery-promo-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px 25px;
+    margin-top: auto;
+    background-color: #a66b65;
+    border: 1px solid #a66b65;
+    color: #ffffff;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    overflow: hidden;
+    transition:
+        background-color 0.4s ease,
+        border-color 0.4s ease,
+        color 0.4s ease;
+}
+
+.jewellery-promo-btn span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    color: #a66b65;
+    border-radius: 50%;
+    font-size: 12px;
+    transition: transform 0.4s ease;
+}
+
+.jewellery-promo-btn:hover {
+    background-color: #393536;
+    border-color: #393536;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.jewellery-promo-btn:hover span {
+    transform: translateX(4px) rotate(-35deg);
+}
+
+
+/* =====================================
+   TEXT HOVER ANIMATION
+===================================== */
+
+.jewellery-promo-content h2 {
+    transition: transform 0.5s ease;
+}
+
+.jewellery-promo-box:hover h2 {
+    transform: translateY(-4px);
+}
+
+
+/* =====================================
+   LAPTOP RESPONSIVE
+===================================== */
+
+@media (max-width: 1399px) {
+
+    .jewellery-promo-box {
+        height: 330px;
+    }
+
+    .jewellery-promo-content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .promo-subtitle {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .jewellery-promo-content h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .jewellery-promo-content p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .jewellery-promo-btn {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+}
+
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 991px) {
+
+    .jewellery-promo-section {
+        padding: 40px 0;
+    }
+
+    .jewellery-promo-box {
+        height: 320px;
+    }
+
+    .jewellery-promo-content h2 {
+        font-size: 36px;
+    }
+
+    .jewellery-promo-row > div:last-child {
+        margin: 0 auto;
+    }
+
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 767px) {
+
+    .jewellery-promo-section {
+        padding: 30px 0;
+    }
+
+    .jewellery-promo-row {
+        row-gap: 20px;
+    }
+
+    .jewellery-promo-box {
+        height: 310px;
+    }
+
+    .jewellery-promo-content {
+        padding: 25px 20px;
+    }
+
+    .promo-style-one .jewellery-promo-content {
+        padding-left: 32%;
+        padding-right: 15px;
+    }
+
+    .promo-style-two .jewellery-promo-content,
+    .promo-style-three .jewellery-promo-content {
+        padding-right: 32%;
+    }
+
+    .promo-subtitle {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        margin-bottom: 10px;
+    }
+
+    .jewellery-promo-content h2 {
+        font-size: 30px;
+        margin-bottom: 12px;
+    }
+
+    .jewellery-promo-content p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .jewellery-promo-btn {
+        padding: 11px 16px;
+        font-size: 12px;
+    }
+
+}
+
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .jewellery-promo-section *,
+    .jewellery-promo-section *::before,
+    .jewellery-promo-section *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
+/** **************** **/
+/* =====================================
+   TESTIMONIAL SECTION
+===================================== */
+
+.jewellery-testimonial-section {
+    position: relative;
+    padding: 90px 40px;
+    background-color: #faf7f4;
+    overflow: hidden;
+}
+
+.jewellery-testimonial-section .container-fluid {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+
+/* =====================================
+   TESTIMONIAL CONTENT
+===================================== */
+
+.jewellery-testimonial-content {
+    position: relative;
+    padding-right: 45px;
+}
+
+.testimonial-heading {
+    margin-bottom: 45px;
+}
+
+.testimonial-subtitle {
+    display: inline-block;
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: #a66b65;
+    margin-bottom: 15px;
+}
+
+.testimonial-heading h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(36px, 3.5vw, 58px);
+    font-weight: 500;
+    line-height: 1.2;
+    color: #393536;
+    margin: 0;
+}
+
+
+/* =====================================
+   TESTIMONIAL BOX
+===================================== */
+
+.testimonial-box {
+    position: relative;
+    padding: 65px 45px 0;
+}
+
+.testimonial-box p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.9;
+    color: #625957;
+    margin: 0;
+    min-height: 130px;
+}
+
+
+/* =====================================
+   QUOTATION MARKS
+===================================== */
+
+.testimonial-quote-start,
+.testimonial-quote-end {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 110px;
+    font-weight: 500;
+    line-height: 0.8;
+    color: #a66b65;
+}
+
+.testimonial-quote-start {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.testimonial-quote-end {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    height: 50px;
+}
+
+
+/* =====================================
+   CUSTOMER PROFILE
+===================================== */
+
+.testimonial-customer {
+    margin-top: 15px;
+    padding-bottom: 10px;
+}
+
+.testimonial-customer img {
+    display: block;
+    width: 75px !important;
+    height: 75px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 3px solid #e1d0ca;
+    margin-bottom: 18px;
+}
+
+.testimonial-customer-name {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.testimonial-customer-name h4 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 27px;
+    font-weight: 600;
+    color: #a66b65;
+    margin: 0;
+}
+
+.testimonial-customer-name span {
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    color: #625957;
+}
+
+
+/* =====================================
+   CUSTOM SLIDER PAGINATION
+===================================== */
+
+.testimonial-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.testimonial-current,
+.testimonial-total {
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #393536;
+}
+
+.testimonial-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.testimonial-progress button {
+    position: relative;
+    width: 45px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.testimonial-progress button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #e1d0ca;
+    border-radius: 4px;
+    transform: translateY(-50%);
+    transition: background-color 0.4s ease;
+}
+
+.testimonial-progress button.active::after,
+.testimonial-progress button:hover::after {
+    background-color: #a66b65;
+}
+
+.testimonial-progress button:focus-visible {
+    outline: 2px solid #a66b65;
+    outline-offset: 3px;
+}
+
+
+/* =====================================
+   OWL CAROUSEL
+===================================== */
+
+.jewellery-testimonial-slider {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+}
+
+.jewellery-testimonial-slider .owl-stage-outer {
+    overflow: hidden;
+}
+
+.jewellery-testimonial-slider .owl-nav,
+.jewellery-testimonial-slider .owl-dots {
+    display: none;
+}
+
+
+/* =====================================
+   RIGHT SIDE IMAGE
+===================================== */
+
+.testimonial-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 470px;
+    margin: 0 auto;
+}
+
+.testimonial-main-image {
+    position: relative;
+    width: 100%;
+    height: clamp(460px, 35vw, 600px);
+    border-radius: 400px 400px 0 0;
+    background-color: #f3ede8;
+    overflow: hidden;
+}
+
+.testimonial-main-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 1.2s
+        cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.testimonial-image-wrapper:hover .testimonial-main-image img {
+    transform: scale(1.06);
+}
+
+
+/* =====================================
+   DECORATIVE STARS
+===================================== */
+
+.testimonial-star {
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.testimonial-star svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.testimonial-star-one {
+    top: -30px;
+    right: -15px;
+    width: 155px;
+    opacity: 0.85;
+    animation: testimonialStarFloat 5s ease-in-out infinite;
+}
+
+.testimonial-star-one svg {
+    fill: #a66b65;
+}
+
+.testimonial-star-two {
+    bottom: 25px;
+    left: 20px;
+    width: 42px;
+    animation: testimonialStarFloat 5s ease-in-out 1s infinite;
+}
+
+.testimonial-star-two svg {
+    fill: #e1d0ca;
+}
+
+@keyframes testimonialStarFloat {
+
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-8px) scale(1.05);
+    }
+
+}
+
+
+/* =====================================
+   TESTIMONIAL TEXT ANIMATION
+===================================== */
+
+.jewellery-testimonial-slider
+.owl-item.active .testimonial-box p {
+    animation: testimonialFadeUp 0.8s ease 0.2s both;
+}
+
+.jewellery-testimonial-slider
+.owl-item.active .testimonial-customer {
+    animation: testimonialFadeUp 0.8s ease 0.4s both;
+}
+
+.jewellery-testimonial-slider
+.owl-item.active .testimonial-quote-start {
+    animation: testimonialFadeIn 0.7s ease both;
+}
+
+.jewellery-testimonial-slider
+.owl-item.active .testimonial-quote-end {
+    animation: testimonialFadeIn 0.7s ease 0.3s both;
+}
+
+@keyframes testimonialFadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes testimonialFadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =====================================
+   LAPTOP RESPONSIVE
+===================================== */
+
+@media (max-width: 1399px) {
+
+    .jewellery-testimonial-section {
+        padding: 75px 30px;
+    }
+
+    .jewellery-testimonial-content {
+        padding-right: 25px;
+    }
+
+    .testimonial-heading {
+        margin-bottom: 35px;
+    }
+
+    .testimonial-heading h2 {
+        font-size: 46px;
+    }
+
+    .testimonial-box {
+        padding: 55px 30px 0;
+    }
+
+    .testimonial-box p {
+        font-size: 16px;
+    }
+
+    .testimonial-main-image {
+        height: 500px;
+    }
+
+    .testimonial-star-one {
+        width: 135px;
+    }
+
+}
+
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 991.98px) {
+
+    .jewellery-testimonial-section {
+        padding: 65px 20px;
+    }
+
+    .jewellery-testimonial-content {
+        padding-right: 0;
+        margin-bottom: 50px;
+    }
+
+    .testimonial-heading h2 {
+        font-size: 44px;
+    }
+
+    .testimonial-main-image {
+        height: 550px;
+    }
+
+    .testimonial-navigation {
+        justify-content: center;
+    }
+
+    .testimonial-image-wrapper {
+        max-width: 450px;
+    }
+
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 767px) {
+
+    .jewellery-testimonial-section {
+        padding: 50px 10px;
+    }
+
+    .testimonial-subtitle {
+        font-size: 11px;
+        letter-spacing: 3px;
+        margin-bottom: 12px;
+    }
+
+    .testimonial-heading {
+        margin-bottom: 30px;
+    }
+
+    .testimonial-heading h2 {
+        font-size: 36px;
+    }
+
+    .testimonial-box {
+        padding: 45px 10px 0;
+    }
+
+    .testimonial-box p {
+        font-size: 15px;
+        line-height: 1.8;
+        min-height: 0;
+    }
+
+    .testimonial-quote-start,
+    .testimonial-quote-end {
+        font-size: 80px;
+    }
+
+    .testimonial-quote-end {
+        height: 35px;
+        margin-top: 15px;
+    }
+
+    .testimonial-customer img {
+        width: 60px !important;
+        height: 60px;
+        margin-bottom: 12px;
+    }
+
+    .testimonial-customer-name h4 {
+        font-size: 23px;
+    }
+
+    .testimonial-customer-name span {
+        font-size: 12px;
+    }
+
+    .testimonial-navigation {
+        margin-top: 25px;
+        gap: 12px;
+    }
+
+    .testimonial-progress {
+        gap: 7px;
+    }
+
+    .testimonial-progress button {
+        width: 32px;
+    }
+
+    .testimonial-image-wrapper {
+        max-width: 340px;
+    }
+
+    .testimonial-main-image {
+        height: 420px;
+    }
+
+    .testimonial-star-one {
+        width: 100px;
+        top: -20px;
+        right: -5px;
+    }
+
+    .testimonial-star-two {
+        width: 30px;
+    }
+
+}
+
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .jewellery-testimonial-section *,
+    .jewellery-testimonial-section *::before,
+    .jewellery-testimonial-section *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+} 
+
+/* =====================================
+   KALAKRITI - SUBTLE SECTION ANIMATIONS
+===================================== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* Scroll reveal: applied only after JS initializes */
+.kk-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.75s ease, transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--kk-delay, 0ms);
+}
+
+.kk-reveal.kk-from-left {
+  transform: translateX(-24px);
+}
+
+.kk-reveal.kk-from-right {
+  transform: translateX(24px);
+}
+
+.kk-reveal.kk-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Existing Bootstrap 4 hero: animate children, not centered wrapper */
+.carousel-item.active .hm-slider-img h6 {
+  animation: kkHeroText 0.65s ease-out 0.20s both;
+}
+
+.carousel-item.active .hm-slider-img h2 {
+  animation: kkHeroText 0.80s ease-out 0.35s both;
+}
+
+.carousel-item.active .hm-slider-img p {
+  animation: kkHeroText 0.75s ease-out 0.50s both;
+}
+
+.carousel-item.active .hm-slider-img .slider-btn {
+  animation: kkHeroText 0.75s ease-out 0.65s both;
+}
+
+@keyframes kkHeroText {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desktop mega menu: no moving hover gap */
+@media (min-width: 992px) {
+  #header .main-nav .drop-down>.megha-menu {
+    top: 100%;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    pointer-events: none;
+  }
+
+  #header .main-nav .drop-down:hover>.megha-menu,
+  #header .main-nav .drop-down:focus-within>.megha-menu {
+    top: 100%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  #header .main-nav .drop-down:hover>.megha-menu .megha-box,
+  #header .main-nav .drop-down:focus-within>.megha-menu .megha-box {
+    animation: kkHeroText 0.4s ease both;
+  }
+
+  #header .main-nav .drop-down:hover>.megha-menu .megha-box-img,
+  #header .main-nav .drop-down:focus-within>.megha-menu .megha-box-img {
+    animation: kkHeroText 0.5s ease 0.08s both;
+  }
+
+  .megha-box-img img {
+    transition: transform 0.65s ease;
+  }
+
+  .megha-box-img:hover img {
+    transform: scale(1.05);
+  }
+}
+
+/* Preserve Owl track transforms and existing card hover effects. */
+footer .ftr-link a {
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 767px) {
+
+  .kk-reveal.kk-from-left,
+  .kk-reveal.kk-from-right {
+    transform: translateY(18px);
+  }
+
+  .kk-reveal.kk-revealed {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .kk-reveal {
+    opacity: 1;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .carousel-item.active .hm-slider-img *,
+  .carousel-fade .carousel-item.active img,
+  #header .megha-menu * {
+    animation: none !important;
+  }
+}
+/* ====================== */
+
+/* =====================================
+   JEWELLERY FOOTER
+===================================== */
+
+.jewellery-footer {
+    position: relative;
+    padding: 35px 40px 0;
+    background-color: #faf7f4;
+    overflow: hidden;
+}
+
+.jewellery-footer .container-fluid {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+/* =====================================
+   FOOTER TOP
+===================================== */
+
+.jewellery-footer-top {
+    padding-bottom: 30px;
+}
+
+
+/* =====================================
+   FOOTER LOGO
+===================================== */
+
+.jewellery-footer-logo a {
+    display: inline-block;
+}
+
+.jewellery-footer-logo img {
+    display: block;
+    width: 190px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.jewellery-footer-logo a:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =====================================
+   FOOTER NAVIGATION
+===================================== */
+
+.jewellery-footer-menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jewellery-footer-menu ul li a {
+    position: relative;
+    display: inline-block;
+    padding: 6px 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    color: #393536;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+/* Navigation Underline Animation */
+
+.jewellery-footer-menu ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #a66b65;
+    transition: width 0.4s ease;
+}
+
+.jewellery-footer-menu ul li a:hover {
+    color: #a66b65;
+}
+
+.jewellery-footer-menu ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* =====================================
+   SOCIAL MEDIA ICONS
+===================================== */
+
+.jewellery-footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 22px;
+}
+
+.jewellery-footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #a66b65;
+    text-decoration: none;
+
+    transition:
+        color 0.35s ease,
+        background-color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.jewellery-footer-social a:hover {
+    color: #ffffff;
+    background-color: #a66b65;
+    transform: translateY(-4px);
+}
+
+
+/* =====================================
+   FOOTER BOTTOM
+===================================== */
+
+.jewellery-footer-bottom {
+    border-top: 1px solid #e1d0ca;
+    padding: 22px 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.jewellery-footer-bottom > div {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/* =====================================
+   COPYRIGHT
+===================================== */
+
+.jewellery-copyright p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #393536;
+    margin: 0;
+}
+
+
+/* =====================================
+   FOOTER TAGLINE
+===================================== */
+
+.jewellery-footer-tagline {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    font-family: "Allura", cursive;
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #a66b65;
+}
+
+.jewellery-footer-tagline i {
+    font-size: 16px;
+    transition: transform 0.4s ease;
+}
+
+.jewellery-footer-tagline:hover i {
+    transform: scale(1.25);
+}
+
+
+/* =====================================
+   LAPTOP RESPONSIVE
+===================================== */
+
+@media (max-width: 1399px) {
+
+    .jewellery-footer {
+        padding: 30px 25px 0;
+    }
+
+    .jewellery-footer-logo img {
+        width: 175px;
+    }
+
+    .jewellery-footer-menu ul {
+        gap: 25px;
+    }
+
+    .jewellery-footer-menu ul li a {
+        font-size: 14px;
+    }
+
+    .jewellery-footer-social {
+        gap: 15px;
+    }
+
+}
+
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 991px) {
+
+    .jewellery-footer {
+        padding: 30px 15px 0;
+    }
+
+    .jewellery-footer-logo img {
+        width: 150px;
+    }
+
+    .jewellery-footer-menu ul {
+        gap: 18px;
+    }
+
+    .jewellery-footer-social {
+        gap: 10px;
+    }
+
+    .jewellery-footer-social a {
+        font-size: 18px;
+    }
+
+    .jewellery-footer-tagline {
+        font-size: 25px;
+    }
+
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 767px) {
+
+    .jewellery-footer {
+        padding: 35px 10px 0;
+    }
+
+    .jewellery-footer-top {
+        padding-bottom: 25px;
+        row-gap: 22px;
+    }
+
+    .jewellery-footer-logo {
+        text-align: center;
+    }
+
+    .jewellery-footer-logo img {
+        width: 160px;
+        margin: 0 auto;
+    }
+
+    .jewellery-footer-menu ul {
+        justify-content: center;
+        gap: 22px;
+    }
+
+    .jewellery-footer-menu ul li a {
+        font-size: 14px;
+    }
+
+    .jewellery-footer-social {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .jewellery-footer-bottom {
+        padding: 20px 0;
+        row-gap: 12px;
+    }
+
+    .jewellery-copyright {
+        text-align: center;
+    }
+
+    .jewellery-copyright p {
+        font-size: 12px;
+    }
+
+    .jewellery-footer-tagline {
+        justify-content: center;
+        font-size: 26px;
+    }
+
+}
+
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .jewellery-footer *,
+    .jewellery-footer *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
+
+.carousel-inner img{
+  width: 100%;
 }
